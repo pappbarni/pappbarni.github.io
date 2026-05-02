@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0-24 Autómentés és Autószállítás</title>
+    <!-- Betűtípus és ikonok betöltése -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Alapvető beállítások */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        
+        /* Színek */
+        :root {
+            --primary: #ff6600; /* Narancssárga figyelemfelkeltő szín */
+            --dark: #1a1a1a;
+            --light: #ffffff;
+        }
+
+        /* Fejléc */
+        header { background-color: var(--dark); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;}
+        .logo { color: var(--light); font-size: 24px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;}
+        .logo span { color: var(--primary); }
+        .call-btn { background-color: var(--primary); color: var(--light); padding: 10px 20px; text-decoration: none; font-weight: 700; border-radius: 5px; font-size: 18px; transition: 0.3s;}
+        .call-btn:hover { background-color: #e65c00; transform: scale(1.05); }
+
+        /* Fő (Hero) Szekció */
+        .hero { 
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1605338167233-a3d8b2d49911?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--light); padding: 0 20px;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; font-weight: 900; }
+        .hero p { font-size: 1.2rem; margin-bottom: 40px; max-width: 600px; }
+        .hero .big-btn { background-color: var(--primary); color: var(--light); padding: 15px 40px; font-size: 24px; text-decoration: none; font-weight: 900; border-radius: 50px; animation: pulse 2s infinite; }
+        
+        /* Animáció a gombhoz */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 102, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 102, 0, 0); }
+        }
+
+        /* Szolgáltatások */
+        .services { padding: 80px 5%; text-align: center; background-color: var(--light); }
+        .section-title { font-size: 2.5rem; margin-bottom: 50px; color: var(--dark); font-weight: 900;}
+        .section-title span { color: var(--primary); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .card { padding: 40px 20px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border-bottom: 4px solid transparent;}
+        .card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--primary); }
+        .card i { font-size: 50px; color: var(--primary); margin-bottom: 20px; }
+        .card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+
+        /* Lábléc (Kapcsolat) */
+        footer { background-color: var(--dark); color: var(--light); text-align: center; padding: 50px 20px; }
+        footer h2 { font-size: 2rem; margin-bottom: 20px; }
+        .contact-info { font-size: 1.2rem; margin-bottom: 30px; }
+        .contact-info i { color: var(--primary); margin-right: 10px; }
+        .copyright { margin-top: 30px; font-size: 0.9rem; opacity: 0.7; }
+
+        /* Mobil optimalizáció */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            .hero h1 { font-size: 2rem; }
+            .hero .big-btn { font-size: 20px; padding: 12px 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fejléc -->
+    <header>
+        <div class="logo">Autó<span>Mentés</span></div>
+        <a href="tel:+36301234567" class="call-btn"><i class="fas fa-phone-alt"></i> +36 30 123 4567</a>
+    </header>
+
+    <!-- Fő (Hero) Szekció -->
+    <section class="hero">
+        <h1>0-24 Autómentés & Szállítás</h1>
+        <p>Azonnali indulás, rejtett költségek nélkül. Lerobbant, karambolozott vagy csak szállítani kell? Hívjon bizalommal!</p>
+        <a href="tel:+36301234567" class="big-btn"><i class="fas fa-phone-alt"></i> HÍVJON MOST</a>
+    </section>
+
+    <!-- Szolgáltatások Szekció -->
+    <section class="services">
+        <h2 class="section-title">Miben <span>segíthetünk?</span></h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-truck-pickup"></i>
+                <h3>Autómentés</h3>
+                <p>Balesetet szenvedett vagy műszaki hibás gépjárművek szakszerű és gyors mentése a nap 24 órájában.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-route"></i>
+                <h3>Autószállítás</h3>
+                <p>Belföldi és külföldi autószállítás előre egyeztetett időpontban, biztonságosan, garanciával.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-battery-full"></i>
+                <h3>Bikázás / Kisebb hibák</h3>
+                <p>Lemerült akkumulátor indítása, kerékcsere vagy ajtónyitás a helyszínen, hogy azonnal továbbhaladhasson.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lábléc / Kapcsolat -->
+    <footer>
+        <h2>Kapcsolat & Rendelés</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-phone-alt"></i> +36 30 123 4567</p>
+            <p><i class="fas fa-envelope"></i> info@automentes.hu</p>
+            <p><i class="fas fa-map-marker-alt"></i> Budapest és vonzáskörzete (Vagy írd ide a városod)</p>
+        </div>
+        <p class="copyright">&copy; 2026 Minden jog fenntartva | Autómentés és Autószállítás</p>
+    </footer>
+
+</body>
+</html>
